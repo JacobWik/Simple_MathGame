@@ -24,7 +24,7 @@ function getRadioValue() {
     }
 }
 
-
+//randomises 2 numbers and generates a question thats appended to questionbox
 function generateNewQuestion(){
     text.removeChild(question);
     getRadioValue();
@@ -34,11 +34,12 @@ function generateNewQuestion(){
     text.appendChild(question);
 }
 
+// gets the filled in answer from the form and compares it to the current answer
 function submitAnswer(){
-    endgameNode.removeChild(endgameNode.firstChild);
-    getRadioValue();
-    answer = document.getElementById("answer").value;
-    if(chosenOperator == "+" && answer == (int1 + int2)){
+    endgameNode.removeChild(endgameNode.firstChild); // removes previous victory/lose text
+    getRadioValue(); // gets the selected operator
+    answer = document.getElementById("answer").value; // gets the user answer
+    if(chosenOperator == "+" && answer == (int1 + int2)){ // checks if the user answer is the correct one and appends the correct text
         console.log("you win");
         endgameNode.appendChild(victoryText);
     }
@@ -56,5 +57,4 @@ function submitAnswer(){
     }
 }
 
-generateNewQuestion();
-console.log(int1 + int2);
+generateNewQuestion(); // generates the first question
