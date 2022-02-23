@@ -1,10 +1,10 @@
 const min = 1;
-const max = 100;
+const max = 100; /* biggest and smallest number used in the question */
 
-let int1 = 1;
+let int1 = 1; /* declaring variables used to hold the 2 numbers  */
 let int2 = 1;
-let chosenOperator = "";
-let answer = 1;
+let chosenOperator = ""; /* variable for holding the chosen operator picked with radiobuttons */
+let answer = 1; /* variable for holding the user answer */
 
 const text = document.getElementById("RandomMath");
 let question = document.createTextNode("question goes here");
@@ -15,9 +15,9 @@ let victoryText = document.createTextNode("Congratulations, you got it right!");
 let loserText = document.createTextNode("Sadly, you got it Wrong!");
 
 
-
-function getRadioValue() {
-    var ele = document.getElementsByName('operator');
+//function that gets the current radio value and assigns it to the variable: chosenOperator
+function getRadioValue() { 
+    var ele = document.getElementsByName('operator'); 
     for(i = 0; i < ele.length; i++) {
         if(ele[i].checked)
         chosenOperator = ele[i].value;
