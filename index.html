@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+    <script src="JS/Script.js" defer ></script>
+    <title>Jacobs Math Game</title>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="headerContainer">
+            <h1>Jacobs Math Game</h1>
+        </div>
+        <div class="container" id="optionsContainer">
+            <h3>Which type of math would you like?</h3>
+            <input type="radio" id="addition" name="operator" value="+" checked="checked" onclick="generateNewQuestion()">
+            <label for="Addition">Addition</label><br>
+            <input type="radio" id="subtraktion" name="operator" value="-" onclick="generateNewQuestion()">
+            <label for="Subtraction">Subtraction</label><br>
+            <input type="radio" id="multiplikation" name="operator" value="*" onclick="generateNewQuestion()">
+            <label for="Multiplication">Multiplication</label>
+        </div>
+        <div class="container" id="questionContainer">
+            <a>What's : </a>
+            <p id="RandomMath">
+            </p>
+            <button class="button-74" role="newQuestionButton" onclick="generateNewQuestion()">Show New Expression</button>
+        </div>
+        <div class="container" id="answerContainer">
+            <a>Type in your answer: </a>
+            <input type="text" id="answer">
+            <input type="submit" class="button-74" role="SubmitAnswerButton" onclick="submitAnswer()">
+        </div>
+        <div id="endgameNode">
+
+        </div>
+        
+    </div>
+</body>
+<footer>
+    <!-- boat from: https://codepen.io/mallowigi-->
+    <div class="boat">
+		<img src="https://treehouse-code-samples.s3.amazonaws.com/CSS-DD/codepen/stage-12/boat.png" alt="tugboat">
+	</div>
+	<img class="mike" src="https://treehouse-code-samples.s3.amazonaws.com/CSS-DD/codepen/stage-12/mike.png">
+</footer>
+</html>

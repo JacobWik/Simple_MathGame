@@ -1,0 +1,181 @@
+/*
+  @author: Jacob Wik Jawi1091    
+    Button-74 got from: https://dev.to/webdeasy/top-20-css-buttons-animations-f41 
+    And Boat anim from : https://codepen.io/mallowigi
+*/
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #667292;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainContainer {
+  display: flex;
+  width: 40%;
+  height: 60%;
+  background-color: #8d9db6;
+  border-radius: 30px;
+  padding: 20px;
+  flex-direction: column;
+}
+
+#headerContainer {
+  display: flex;
+  justify-content: center;
+  background-color: #bccad6;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+a,
+label,
+p {
+  font-size: large;
+  font-weight: 600;
+}
+
+p {
+  background-color: #bccad6;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#endgameNode {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-74 {
+  background-color: #bccad6;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+body {
+  background: #f0fcf5
+    url("https://treehouse-code-samples.s3.amazonaws.com/CSS-DD/codepen/stage-12/island.png")
+    repeat-x 100% -460px;
+  -webkit-background-size: 780px;
+  background-size: 780px;
+
+  -webkit-animation: bg-move 8s ease-out forwards;
+}
+
+.boat {
+  width: 380px;
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  -webkit-animation: rock-boat 3s ease-in-out infinite;
+}
+
+.boat img {
+  width: 100%;
+}
+
+.boat::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 120px;
+  background: url("https://treehouse-code-samples.s3.amazonaws.com/CSS-DD/codepen/stage-12/steam.png")
+    no-repeat;
+  -webkit-background-size: 120px;
+  background-size: 120px;
+  position: absolute;
+  top: -25%;
+  left: 5%;
+
+  -webkit-animation: steam 4s 2s infinite;
+}
+
+.mike {
+  width: 180px;
+  position: absolute;
+  top: 55%;
+  left: -15%;
+  -webkit-transform: rotateZ(-5deg);
+
+  -webkit-animation: mike-move 6s 6s ease-out forwards, mike-float 3.2s infinite;
+}
+
+@-webkit-keyframes rock-boat {
+  50% {
+    -webkit-transform: rotate(-5deg) translateY(-5px);
+  }
+}
+
+@-webkit-keyframes steam {
+  40%,
+  60% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-15%, -35%) rotateZ(20deg);
+  }
+}
+
+@-webkit-keyframes bg-move {
+  0% {
+    background-position: 100% -460px;
+  }
+  100% {
+    background-position: -250% -420px;
+  }
+}
+
+@-webkit-keyframes mike-move {
+  100% {
+    left: 12%;
+  }
+}
+
+@-webkit-keyframes mike-float {
+  50% {
+    -webkit-transform: rotateZ(5deg) translateY(-5px);
+  }
+}
